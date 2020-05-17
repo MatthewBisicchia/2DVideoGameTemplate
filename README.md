@@ -1,2 +1,2 @@
-# 2DVideoGameTemplate
+# TwoDVideoGameTemplate
 Starter JavaScript code for a 2D video game template, using the P5 JavaScript Graphics Library. This code is designed to run along with HTML in a web browser. This application is not a completed game, but is rather a template upon which can be used to build a game. A rather crude example of the player collecting pumpkins in a field. This is technically a work in progress on the developer's end, however it can be built upon as is by users. 
