@@ -9,18 +9,15 @@ class TwoDVideoGameTemplate
     textArea;
     textNode;
 
-    constructor(music, playerSpriteSheet, playerSpriteData, groundSprite, pumpkinSprite)
+    constructor(playerSpriteSheet, playerSpriteData, groundSprite, pumpkinSprite)
     {
         //the game's resources (which are pre loaded in the game engine):
-        this.music = music;
         this.playerSpriteSheet = playerSpriteSheet;
         this.playerSpriteData = playerSpriteData;
         this.playerSprites = [];
         this.loadPlayerSprites();
         this.groundSprite = groundSprite;
         this.pumpkinSprite = pumpkinSprite;
-
-
 
         //The game objects in this game:
         this.gameObjects = [];
@@ -40,12 +37,12 @@ class TwoDVideoGameTemplate
     loadPlayerSprites()
     {
         //get individual sprites from the sprite sheet and load it into the animation array:
-        let frames = this.playerSpriteData.frames;
-        for(let i = 0; i < frames.length; i++)
+        let spriteInstants = this.playerSpriteData.spriteInstants;
+        for(let i = 0; i < spriteInstants.length; i++)
         {
-            let pos = frames[i].position;
-            let img = this.playerSpriteSheet.get(pos.x, pos.y, pos.w, pos.h);
-            this.playerSprites.push(img);
+            let position = spriteInstants[i].position;
+            let spriteInstant = this.playerSpriteSheet.get(position.xCoordinate, position.yCoordinate, position.spriteInstantWidth, position.spriteInstantHeight);
+            this.playerSprites.push(spriteInstant);
         }
     }
 
@@ -113,12 +110,7 @@ class TwoDVideoGameTemplate
     }
 
 
-    //getters (allow for the GameEngine to access all of this data and do stuff with it):
-
-    getMusic()
-    {
-        return this.music;
-    }
+    //getters (allow for the GameEngine to access data):
 
     getGameObjects()
     {

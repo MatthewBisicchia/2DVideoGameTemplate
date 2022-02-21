@@ -23,7 +23,6 @@ let restPosition = "down";
  * in this preload function.
  */
 
-let music;
 let playerSpriteSheet;
 let playerSpriteData;
 let groundSprite;
@@ -34,8 +33,6 @@ let pumpkinSprite;
  */
 function preload()
 {
-    //Music is from a Royalty Free Source; credit to Kevin MacLeod, retrieved fom incompetech.com
-    music = loadSound('assets/audio/Ghost_Story_Kevin_MacLeod.mp3');
 
     playerSpriteSheet = loadImage('assets/imagery/playerSpriteSheet.png');
     playerSpriteData = loadJSON('assets/imagery/playerSprite.json');
@@ -59,9 +56,8 @@ function setup()
  */
 function start()
 {
-    game = new TwoDVideoGameTemplate(music, playerSpriteSheet, playerSpriteData, groundSprite, pumpkinSprite);
+    game = new TwoDVideoGameTemplate(playerSpriteSheet, playerSpriteData, groundSprite, pumpkinSprite);
     started = true;
-    music.play();
 }
 
 /**
@@ -105,7 +101,6 @@ function drawBackground()
             x += 120;
         }
     }
-
 
 }
 
