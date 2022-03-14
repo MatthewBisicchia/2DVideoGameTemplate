@@ -2,7 +2,7 @@
 
 _**This was developed in a short time period in May 2020- as an entertaining side project- and development was not active since then. The most recent commits, however, were only for brief cleanup.**_
 
-**Please note this is a work in progress on the developer's end. It is technically in its very first release, and so therefore it is certainly not as refined as the developer would want. However, it can be built upon as is by users.**
+**Please note this is a work in progress. It is technically in its very first release, and so therefore it is certainly not as refined as the developer would want. However, it can be built upon as is by users.**
 
 ~
 
